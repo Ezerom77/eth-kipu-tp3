@@ -28,6 +28,16 @@ contract SimpleSwap is ERC20, ISimpleSwap {
         _;
     }
 
+    /// @notice Event emitted when a new token pair is created
+    /// @param tokenA Address of the first token in the pair
+    /// @param tokenB Address of the second token in the pair
+    /// @param pair Address of the created exchange contract
+    event PairCreated(
+        address indexed tokenA,
+        address indexed tokenB,
+        address pair
+    );
+
     /// @notice Contract constructor
     /// @dev Initializes the ERC20 token for liquidity tokens and sets the token pair
     /// @param _tokenA Address of the first token in the pair
@@ -44,6 +54,9 @@ contract SimpleSwap is ERC20, ISimpleSwap {
             tokenA = _tokenB;
             tokenB = _tokenA;
         }
+
+        // Emit pair creation event
+        emit PairCreated(tokenA, tokenB, address(this));
     }
 
     /// @inheritdoc ISimpleSwap
@@ -289,7 +302,7 @@ contract SimpleSwap is ERC20, ISimpleSwap {
     function getReserves(
         address _tokenA,
         address _tokenB
-    ) external view returns (uint256 reserveAmount1, uint256 reserveAmount2) {
+    ) external view override returns (uint256 reserveA, uint256 reserveB) {
         // Verify tokens match the pair
         require(
             (_tokenA == tokenA && _tokenB == tokenB) ||

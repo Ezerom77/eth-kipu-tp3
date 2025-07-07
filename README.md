@@ -2,12 +2,14 @@
 
 ## UPDATE 7/7/2025
 
-- Segun la corrección recibida, se ajustalos Long Strings por Short Strings
-- Se simplifico para trabajar con dos tokens y no como router
+- According to the received correction, Long Strings were adjusted to Short Strings
+- It was simplified to work with two tokens and not as a router\
+- Event PairCreated was added to the contract
 
-- Token A:
-- Token B:
-- contract address:
+- Token A: 0xF793f2189Fab2a9580D57592ffF335703dc9Ea59
+- Token B: 0x67C180f58081F4a9f588Cf9a930e70f0E036bEC3
+- contract address: 0xB20B3BcEc027081fe4F228d5d48cb7747381677a
+- contract URL: https://sepolia.etherscan.io/address/0xB20B3BcEc027081fe4F228d5d48cb7747381677a#code
 
 ## Description
 
