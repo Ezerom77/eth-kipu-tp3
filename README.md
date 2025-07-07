@@ -1,5 +1,14 @@
 # SimpleSwap - ERC20 Token Exchange Contract
 
+## UPDATE 7/7/2025
+
+- Segun la corrección recibida, se ajustalos Long Strings por Short Strings
+- Se simplifico para trabajar con dos tokens y no como router
+
+- Token A:
+- Token B:
+- contract address:
+
 ## Description
 
 As part of the 3thTP of Eth-Kipu Course, SimpleSwap is a simplified implementation similar to Uniswap, but without depending on its protocol. This contract allows users to swap ERC20 tokens, add and remove liquidity from token pairs, and query prices and exchange amounts.
